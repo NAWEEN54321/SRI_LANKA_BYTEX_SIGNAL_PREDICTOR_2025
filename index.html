@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="si">
 <head>
@@ -33,7 +32,7 @@
             width: 100%;
             border-radius: 10px;
         }
-        .close-btn {
+        .close-btn, .whatsapp-btn {
             background-color: red;
             color: white;
             border: none;
@@ -42,9 +41,17 @@
             cursor: pointer;
             border-radius: 5px;
             margin-top: 20px;
+            display: block;
+            width: 100%;
         }
         .close-btn:hover {
             background-color: darkred;
+        }
+        .whatsapp-btn {
+            background-color: #25D366;
+        }
+        .whatsapp-btn:hover {
+            background-color: #1ebe5d;
         }
     </style>
 </head>
@@ -61,10 +68,11 @@
         <h2>📢 NOTICE</h2>
         <img src="https://dl.dropboxusercontent.com/scl/fi/opptdtk92bl4jvw6t31yq/IMG-20250218-WA0007.jpg?rlkey=4br287q5onf9v4myjb7usbk1d&st=rhx8f9zt" alt="Notice Image">
         <p>මෙම යෙදුම නිර්මාණය කර ඇත්තේ BYTEX PREDICTOR SOFTWARE TEAM විසිනි.</p>
-        <p>BYTEX යෙදුම විකිනීම සම්පුර්ණ තහනම් වන අතර මෙහි අයිතිය BYTEX අදිපති සතුය<p>
+        <p>BYTEX යෙදුම විකිනීම සම්පුර්ණ තහනම් වන අතර මෙහි අයිතිය BYTEX අදිපති සතුය.</p>
         <p>🚀 1XBET සහ MELBET සඳහා AVIATOR ක්‍රීඩාවට ක්‍රියා කරයි.</p>
         <p>📞 වැඩිදුර විස්තර සඳහා: <a href="https://wa.me/94767324225" target="_blank">+94 76 732 4225</a></p>
         <button class="close-btn" onclick="redirectToURL()">CLOSE</button>
+        <button class="whatsapp-btn" onclick="joinWhatsApp()">BYTEX PREDICTOR WHATSAPP GROUP JOIN NOW</button>
     </div>
 </div>
 
@@ -83,6 +91,10 @@
         } else {
             alert("කැරි පොන්නයෝ ඩේටා ඕන් කරපං!"); // Alert when no internet
         }
+    }
+
+    function joinWhatsApp() {
+        window.location.href = "https://chat.whatsapp.com/Kiuaab7aVmW14cyBOfKWnH"; // WhatsApp Group Link
     }
 
     window.onload = checkInternet; // Page Load වෙද්දී Internet පරීක්ෂා කරන්න
