@@ -1,104 +1,128 @@
 <!DOCTYPE html>
 <html lang="si">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BYTEX PREDICTOR</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-        }
-        .hidden {
-            display: none;
-        }
-        .error-msg {
-            color: red;
-            font-size: 20px;
-            font-weight: bold;
-        }
-        .notice-box {
-            border: 2px solid black;
-            padding: 20px;
-            margin: 20px auto;
-            width: 90%;
-            max-width: 400px;
-            background-color: #f8f9fa;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-            border-radius: 10px;
-        }
-        .notice-box img {
-            width: 100%;
-            border-radius: 10px;
-        }
-        .close-btn, .whatsapp-btn {
-            background-color: red;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 5px;
-            margin-top: 20px;
-            display: block;
-            width: 100%;
-        }
-        .close-btn:hover {
-            background-color: darkred;
-        }
-        .whatsapp-btn {
-            background-color: #25D366;
-        }
-        .whatsapp-btn:hover {
-            background-color: #1ebe5d;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BYTEX PREDICTOR</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0f172a;
+      color: white;
+      text-align: center;
+      padding: 30px;
+    }
+    h1 {
+      color: #38bdf8;
+      font-size: 2.5rem;
+    }
+    .message, .skip-page {
+      background-color: #1e293b;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #0ea5e9;
+      max-width: 600px;
+      margin: 0 auto;
+      display: none;
+    }
+    .highlight {
+      color: #ef4444;
+      font-weight: bold;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 15px 25px;
+      background-color: #22c55e;
+      color: white;
+      font-size: 1rem;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      opacity: 0.9;
+    }
+    .btn-skip {
+      background-color: #f97316;
+      margin-left: 10px;
+    }
+
+    .notice-box img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 15px;
+    }
+
+    .close-btn, .whatsapp-btn {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 20px;
+      display: block;
+      width: 100%;
+    }
+    .whatsapp-btn {
+      background-color: #25D366;
+    }
+  </style>
 </head>
 <body>
 
-<!-- Internet OFF නම් පෙන්වන්නේ මෙය -->
-<div id="noInternet" class="error-msg hidden">
-    කැරි පොන්නයෝ ඩේටා ඕන් කරපං! ONLINE SERVER එකක් හරහා ඇප් එක වැඩ කරන්නේ.
-</div>
+  <h1>BYTEX PREDICTOR</h1>
 
-<!-- Internet ON නම් පෙන්වන්නේ මෙය -->
-<div id="mainContent" class="hidden">
+  <!-- First Page -->
+  <div class="message" id="mainPage">
+    <p><strong>BYTEX PREDICTOR</strong> සාදරයෙන් පිලිගන්නවා!</p>
+    <p>ඔබ සියළුම සාමාජිකයන් හට <strong>ජය වේවා, සුභ වේවා</strong> කියමින් ප්‍රාර්ථනා කරනවා.</p>
+    <p>අනිවාර්යෙන් පහත සදහන් <span class="highlight">🔴 BYTEX WHATSAPP CHANNEL</span> සම්බන්ධ වන්න.</p>
+    
+    <a class="btn" href="https://whatsapp.com/channel/0029VbAgqpG3gvWb7BepMM2c" target="_blank">
+      NEW BYTEX WHATSAPP CHANNELS 2025
+    </a>
+    <button class="btn btn-skip" onclick="showSkipPage()">SKIP</button>
+  </div>
+
+  <!-- Second Page -->
+  <div class="skip-page" id="skipPage">
+    <h2>📢 NOTICE</h2>
     <div class="notice-box">
-        <h2>📢 NOTICE</h2>
-        <img src="https://dl.dropboxusercontent.com/scl/fi/opptdtk92bl4jvw6t31yq/IMG-20250218-WA0007.jpg?rlkey=4br287q5onf9v4myjb7usbk1d&st=rhx8f9zt" alt="Notice Image">
-        <p>මෙම යෙදුම නිර්මාණය කර ඇත්තේ BYTEX PREDICTOR SOFTWARE TEAM විසිනි.</p>
-        <p>BYTEX යෙදුම විකිනීම සම්පුර්ණ තහනම් වන අතර මෙහි අයිතිය BYTEX අදිපති සතුය.</p>
-        <p>🚀 1XBET සහ MELBET සඳහා AVIATOR ක්‍රීඩාවට ක්‍රියා කරයි.</p>
-        <p>📞 වැඩිදුර විස්තර සඳහා: <a href="https://wa.me/94767324225" target="_blank">+94 76 732 4225</a></p>
-        <button class="close-btn" onclick="redirectToURL()">CLOSE</button>
-        <button class="whatsapp-btn" onclick="joinWhatsApp()">BYTEX PREDICTOR WHATSAPP GROUP JOIN NOW</button>
+      <img src="https://dl.dropboxusercontent.com/scl/fi/opptdtk92bl4jvw6t31yq/IMG-20250218-WA0007.jpg?rlkey=4br287q5onf9v4myjb7usbk1d&st=rhx8f9zt" alt="Notice Image">
+      <p>මෙම යෙදුම නිර්මාණය කර ඇත්තේ BYTEX PREDICTOR SOFTWARE TEAM විසිනි.</p>
+      <p>BYTEX යෙදුම විකිනීම සම්පුර්ණ තහනම් වන අතර මෙහි අයිතිය BYTEX අදිපති සතුය.</p>
+      <p>🚀 1XBET සහ MELBET සඳහා AVIATOR ක්‍රීඩාවට ක්‍රියා කරයි.</p>
+      <p>📞 වැඩිදුර විස්තර: <a href="https://wa.me/94767324225" target="_blank">+94 76 732 4225</a></p>
+      <button class="close-btn" onclick="redirectToURL()">CLOSE</button>
+      <button class="whatsapp-btn" onclick="joinWhatsApp()">BYTEX WHATSAPP GROUP JOIN</button>
     </div>
-</div>
+  </div>
 
-<script>
-    function checkInternet() {
-        if (navigator.onLine) {
-            document.getElementById("mainContent").classList.remove("hidden"); // Internet ON නම් Content පෙන්වයි
-        } else {
-            document.getElementById("noInternet").classList.remove("hidden"); // Internet OFF නම් පණිවිඩය පෙන්වයි
-        }
+  <script>
+    // Show First Page on Load
+    document.getElementById("mainPage").style.display = "block";
+
+    function showSkipPage() {
+      document.getElementById("mainPage").style.display = "none";
+      document.getElementById("skipPage").style.display = "block";
     }
 
     function redirectToURL() {
-        if (navigator.onLine) {
-            window.location.href = "https://naween54321.github.io/Bytex678788/"; // New URL
-        } else {
-            alert("කැරි පොන්නයෝ ඩේටා ඕන් කරපං!"); // Alert when no internet
-        }
+      if (navigator.onLine) {
+        window.location.href = "https://naween54321.github.io/Bytex678788/";
+      } else {
+        alert("කැරි පොන්නයෝ ඩේටා ඕන් කරපං!");
+      }
     }
 
     function joinWhatsApp() {
-        window.location.href = "https://whatsapp.com/channel/0029VbAgqpG3gvWb7BepMM2c"; // WhatsApp Group Link
+      window.location.href = "https://whatsapp.com/channel/0029VbAgqpG3gvWb7BepMM2c";
     }
-
-    window.onload = checkInternet; // Page Load වෙද්දී Internet පරීක්ෂා කරන්න
-</script>
+  </script>
 
 </body>
 </html>
