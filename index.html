@@ -39,7 +39,7 @@
       font-weight: bold;
       text-decoration: none;
       border-radius: 10px;
-      transition: background-color 0.3s ease;
+      transition: 0.3s;
     }
     .btn:hover {
       opacity: 0.9;
@@ -48,27 +48,43 @@
       background-color: #f97316;
       margin-left: 10px;
     }
-
     .notice-box img {
       width: 100%;
       border-radius: 10px;
       margin-top: 15px;
     }
-
-    .close-btn, .whatsapp-btn {
-      background-color: red;
+    .close-btn, .whatsapp-btn, .youtube-btn {
       color: white;
       border: none;
-      padding: 10px 15px;
+      padding: 12px 18px;
       font-size: 16px;
       cursor: pointer;
-      border-radius: 5px;
-      margin-top: 20px;
+      border-radius: 8px;
+      margin-top: 15px;
       display: block;
       width: 100%;
+      font-weight: bold;
+      transition: 0.3s;
     }
-    .whatsapp-btn {
-      background-color: #25D366;
+    .close-btn { background-color: red; }
+    .whatsapp-btn { background-color: #25D366; }
+
+    /* YouTube button special style */
+    .youtube-btn {
+      background-color: #FF0000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .youtube-btn:hover {
+      background-color: #cc0000;
+    }
+    .youtube-icon {
+      width: 20px;
+      height: 20px;
+      background: white;
+      clip-path: polygon(30% 20%, 30% 80%, 80% 50%);
     }
   </style>
 </head>
@@ -82,8 +98,12 @@
     <p>ඔබ සියළුම සාමාජිකයන් හට <strong>ජය වේවා, සුභ වේවා</strong> කියමින් ප්‍රාර්ථනා කරනවා.</p>
     <p>අනිවාර්යෙන් පහත සදහන් <span class="highlight">🔴 BYTEX WHATSAPP GROUP</span> සම්බන්ධ වන්න.</p>
     
-    <a class="btn" href="https://chat.whatsapp.com/BJQbLQ7EsZk0k6vJgVrSam" target="_blank">
+    <a class="btn" href="https://chat.whatsapp.com/ByduF4Y2aR10aYJZT0x2Yc?mode=ems_copy_t" target="_blank">
       NEW BYTEX WHATSAPP GROUP 2025
+    </a>
+    <!-- New YouTube Button -->
+    <a class="youtube-btn" href="https://youtube.com/@aviatorcrashtipslankagamep-i5v?si=Il7DuNeshgZ3iUMg" target="_blank">
+      <div class="youtube-icon"></div> BYTEX YOUTUBE CHANNEL WATCH NOW
     </a>
     <button class="btn btn-skip" onclick="showSkipPage()">SKIP</button>
   </div>
@@ -99,10 +119,37 @@
       <p>📞 වැඩිදුර විස්තර: <a href="https://wa.me/94722553293" target="_blank">+94 72 132 6398</a></p>
       <button class="close-btn" onclick="redirectToURL()">CLOSE</button>
       <button class="whatsapp-btn" onclick="joinWhatsApp()">BYTEX WHATSAPP GROUP JOIN</button>
+      <!-- New YouTube Button -->
+      <a class="youtube-btn" href="https://youtube.com/@aviatorcrashtipslankagamep-i5v?si=Il7DuNeshgZ3iUMg" target="_blank">
+        <div class="youtube-icon"></div> BYTEX YOUTUBE CHANNEL WATCH NOW
+      </a>
     </div>
   </div>
 
   <script>
+    // Show First Page on Load
+    document.getElementById("mainPage").style.display = "block";
+
+    function showSkipPage() {
+      document.getElementById("mainPage").style.display = "none";
+      document.getElementById("skipPage").style.display = "block";
+    }
+
+    function redirectToURL() {
+      if (navigator.onLine) {
+        window.location.href = "https://naween54321.github.io/Bytex678788/";
+      } else {
+        alert("කැරි පොන්නයෝ ඩේටා ඕන් කරපං!");
+      }
+    }
+
+    function joinWhatsApp() {
+      window.location.href = "https://chat.whatsapp.com/BJQbLQ7EsZk0k6vJgVrSam";
+    }
+  </script>
+
+</body>
+  </html>  <script>
     // Show First Page on Load
     document.getElementById("mainPage").style.display = "block";
 
