@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BYTEX PREDICTOR</title>
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -12,10 +13,12 @@
       text-align: center;
       padding: 30px;
     }
+
     h1 {
       color: #38bdf8;
       font-size: 2.5rem;
     }
+
     .message, .skip-page {
       background-color: #1e293b;
       padding: 20px;
@@ -25,10 +28,12 @@
       margin: 0 auto;
       display: none;
     }
+
     .highlight {
       color: #ef4444;
       font-weight: bold;
     }
+
     .btn {
       display: inline-block;
       margin-top: 20px;
@@ -41,18 +46,22 @@
       border-radius: 10px;
       transition: 0.3s;
     }
+
     .btn:hover {
       opacity: 0.9;
     }
+
     .btn-skip {
       background-color: #f97316;
       margin-left: 10px;
     }
+
     .notice-box img {
       width: 100%;
       border-radius: 10px;
       margin-top: 15px;
     }
+
     .close-btn, .whatsapp-btn, .youtube-btn {
       color: white;
       border: none;
@@ -65,11 +74,12 @@
       width: 100%;
       font-weight: bold;
       transition: 0.3s;
+      text-decoration: none;
     }
+
     .close-btn { background-color: red; }
     .whatsapp-btn { background-color: #25D366; }
 
-    /* YouTube button special style */
     .youtube-btn {
       background-color: #FF0000;
       display: flex;
@@ -77,9 +87,11 @@
       justify-content: center;
       gap: 10px;
     }
+
     .youtube-btn:hover {
       background-color: #cc0000;
     }
+
     .youtube-icon {
       width: 20px;
       height: 20px;
@@ -88,21 +100,76 @@
     }
   </style>
 </head>
+
 <body>
 
-  <h1>BYTEX PREDICTOR</h1>
+<h1>BYTEX PREDICTOR</h1>
 
-  <!-- First Page -->
-  <div class="message" id="mainPage">
-    <p><strong>BYTEX PREDICTOR</strong> සාදරයෙන් පිලිගන්නවා!</p>
-    <p>ඔබ සියළුම සාමාජිකයන් හට <strong>ජය වේවා, සුභ වේවා</strong> කියමින් ප්‍රාර්ථනා කරනවා.</p>
-    <p>අනිවාර්යෙන් පහත සදහන් <span class="highlight">🔴 BYTEX WHATSAPP GROUP</span> සම්බන්ධ වන්න.</p>
-    
-    <a class="btn" href="https://chat.whatsapp.com/ByduF4Y2aR10aYJZT0x2Yc?mode=ems_copy_t" target="_blank">
-      NEW BYTEX WHATSAPP GROUP 2025
+<!-- First Page -->
+<div class="message" id="mainPage">
+  <p><strong>BYTEX PREDICTOR</strong> සාදරයෙන් පිලිගන්නවා!</p>
+  <p>ඔබ සියළුම සාමාජිකයන් හට <strong>ජය වේවා, සුභ වේවා</strong> කියමින් ප්‍රාර්ථනා කරනවා.</p>
+  <p>අනිවාර්යෙන් පහත සදහන් <span class="highlight">🔴 BYTEX WHATSAPP GROUP</span> සම්බන්ධ වන්න.</p>
+
+  <a class="btn" href="https://chat.whatsapp.com/ByduF4Y2aR10aYJZT0x2Yc?mode=ems_copy_t" target="_blank">
+    NEW BYTEX WHATSAPP GROUP 2026
+  </a>
+
+  <a class="youtube-btn" href="https://youtube.com/@bytex_predictor_pro?si=7bRMo-JWDqNlhK1U" target="_blank">
+    <div class="youtube-icon"></div>
+    BYTEX PREDICTOR PRO NEW YOUTUBE CHANAL 2026
+  </a>
+
+  <button class="btn btn-skip" onclick="showSkipPage()">SKIP</button>
+</div>
+
+<!-- Second Page -->
+<div class="skip-page" id="skipPage">
+  <h2>📢 NOTICE</h2>
+
+  <div class="notice-box">
+    <img src="https://dl.dropboxusercontent.com/scl/fi/opptdtk92bl4jvw6t31yq/IMG-20250218-WA0007.jpg?rlkey=4br287q5onf9v4myjb7usbk1d" alt="Notice Image">
+
+    <p>මෙම යෙදුම නිර්මාණය කර ඇත්තේ BYTEX PREDICTOR SOFTWARE TEAM විසිනි.</p>
+    <p>BYTEX යෙදුම විකිනීම සම්පුර්ණ තහනම් වන අතර මෙහි අයිතිය BYTEX අදිපති සතුය.</p>
+    <p>🚀 1XBET සහ MELBET සඳහා AVIATOR ක්‍රීඩාවට ක්‍රියා කරයි.</p>
+    <p>📞 වැඩිදුර විස්තර:
+      <a href="https://wa.me/94722553293" target="_blank">+94 72 132 6398</a>
+    </p>
+
+    <button class="close-btn" onclick="redirectToURL()">CLOSE</button>
+    <button class="whatsapp-btn" onclick="joinWhatsApp()">BYTEX WHATSAPP GROUP JOIN</button>
+
+    <a class="youtube-btn" href="https://youtube.com/@bytex_predictor_pro?si=7bRMo-JWDqNlhK1U" target="_blank">
+      <div class="youtube-icon"></div>
+      BYTEX PREDICTOR PRO NEW YOUTUBE CHANAL 2026
     </a>
-    <!-- New YouTube Button -->
-    <a class="youtube-btn" href="https://youtube.com/@aviatorcrashtipslankagamep-i5v?si=Il7DuNeshgZ3iUMg" target="_blank">
+  </div>
+</div>
+
+<script>
+  document.getElementById("mainPage").style.display = "block";
+
+  function showSkipPage() {
+    document.getElementById("mainPage").style.display = "none";
+    document.getElementById("skipPage").style.display = "block";
+  }
+
+  function redirectToURL() {
+    if (navigator.onLine) {
+      window.location.href = "https://naween54321.github.io/Bytex678788/";
+    } else {
+      alert("කැරි පොන්නයෝ ඩේටා ඕන් කරපං!");
+    }
+  }
+
+  function joinWhatsApp() {
+    window.location.href = "https://chat.whatsapp.com/ByduF4Y2aR10aYJZT0x2Yc?mode=ems_copy_t";
+  }
+</script>
+
+</body>
+</html>    <a class="youtube-btn" href="https://youtube.com/@aviatorcrashtipslankagamep-i5v?si=Il7DuNeshgZ3iUMg" target="_blank">
       <div class="youtube-icon"></div> BYTEX YOUTUBE CHANNEL WATCH NOW
     </a>
     <button class="btn btn-skip" onclick="showSkipPage()">SKIP</button>
